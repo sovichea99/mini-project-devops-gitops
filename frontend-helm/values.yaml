@@ -91,7 +91,10 @@ resources: {}
 livenessProbe:
   httpGet:
     path: /
-    port: http
+    port: 3000
+  initialDelaySeconds: 15
+  periodSeconds: 20
+  failureThreshold: 10
 readinessProbe:
   httpGet:
     path: /
